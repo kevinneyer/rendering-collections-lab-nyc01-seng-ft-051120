@@ -1,0 +1,6 @@
+<% @invoices.each do |invoice| %>
+<tr>
+  <td><%= invoice.id %></td>
+  <td><%= invoice.orders.first ? invoice.orders.first.customer.name : 'No Orders' %></td>
+</tr>
+<% end %>
